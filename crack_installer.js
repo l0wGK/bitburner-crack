@@ -10,11 +10,4 @@ export async function main(ns) {
 	ns.print("Installed hack_2.js")
 	await ns.wget('https://raw.githubusercontent.com/l0wGK/bitburner-crack/main/transactions.js', 'transactions.js');
 	ns.print("Installed transactions.js");
-	ns.print("You may now kill this script");
-
-	ns.tail('crack_installer.js', 'home');
-
-	while (true) {
-		await ns.sleep(100);
-	}
 }
