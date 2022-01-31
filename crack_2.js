@@ -104,12 +104,9 @@ export async function main(ns) {
 		} 
 	}
 
+	if (ns.scriptRunning('track_2.js', 'home') && ns.scriptRunning('transactions.js', 'home')) return;
 	ns.exec('track_2.js', 'home');
 	ns.tail('track_2.js', 'home');
 	ns.exec('transactions.js', 'home');
 	ns.tail('transactions.js', 'home');
-
-	while (true) {
-		await ns.sleep(1000);
-	}
 }
