@@ -12,6 +12,8 @@ export async function main(ns) {
 	ns.print("Installed transactions.js");
 	ns.print("You may now kill this script");
 
+	ns.tail('crack_installer.js', 'home');
+
 	while (true) {
 		await ns.sleep(100);
 	}
